@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+	<extension point="org.eclipse.debug.core.launchConfigurationTypes">
+		<launchConfigurationType
+			name="Composite launch configuration"
+			delegate="com.nickfirsov.composite_config_plugin.CompositeLaunchConfigDelegate"
+			modes="run, debug"
+			id="com.nickfirsov.composite_config_plugin.composite_launch_config">
+		</launchConfigurationType>
+	</extension>
+	<extension point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+		<launchConfigurationTypeImage
+			icon="icons/Rad_icon.png"
+			configTypeID="com.nickfirsov.composite_config_plugin.composite_launch_config"
+			id="com.nickfirsov.composite_config_plugin.composite_launch_config.ui.launchConfigurationTypeImage.icon">
+		</launchConfigurationTypeImage>
+	</extension>
+	<extension point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+		<launchConfigurationTabGroup
+			type="com.nickfirsov.composite_config_plugin.composite_launch_config"
+			class="com.nickfirsov.composite_config_plugin.ui.CompositeLaunchConfigTabGroup"
+			id="com.nickfirsov.composite_config_plugin.composite_launch_config.ui.launchConfigurationTabGroup.tabGroup">
+		</launchConfigurationTabGroup>
+	</extension>
+</plugin>
